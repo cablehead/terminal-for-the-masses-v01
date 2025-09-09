@@ -26,11 +26,15 @@ style: |
     max-height: 80vh;
   }
 ---
-title: "Workshop: Terminal for the Masses ::\nV01"
-doc: |
-    *[@ndyg](https://ndyg.co)*
-
-    [Sep 9, 2025](.) &middot; New Stadium, Toronto
+title: "Workshop: Terminal for the Masses :: V01"
+v-stack:
+  - img:
+      src: ./screenshot.png
+      width: 30%
+  - doc: |
+      *[@ndyg](https://ndyg.co)*
+  - doc: |
+      [Sep 9, 2025](.) &middot; New Stadium, Toronto
 ---
 title: resources
 v-stack:
