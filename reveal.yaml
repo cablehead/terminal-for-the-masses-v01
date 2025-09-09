@@ -120,10 +120,6 @@ h-stack:
       src: ./shell.png
       width: 100%
 ---
-title: Shell
-doc: |
-    An environment for connecting and orchestrating small building blocks. It lets you interactively assemble them, see results immediately, and improvise workflows on the fly.
----
 title-hidden: terminal history
 img:
   src: ./terminal-history.png
@@ -135,9 +131,23 @@ h-stack:
   - img:
       src: ./terminal-history-nushell.png
       width: 90%
-  - img:
-      src: ./nushell.png
-      width: 60%
+  - doc: |
+      [![](./nushell.png)](https://www.nushell.sh)
+---
+title: Shell
+doc: |
+    An environment for connecting and orchestrating small building blocks. It lets you interactively assemble them, see results immediately, and improvise workflows on the fly.
+---
+title-hidden: shell journey
+v-stack:
+  - doc: |
+      **Shell (where you begin)**
+      
+      A place to type something small, poke at it, and immediately see what happens. You try, adjust, and learn through instant feedback.
+  - doc: |
+      **Shell (where you end up)**
+      
+      An environment for connecting and orchestrating small tools. Over time, those little pokes become building blocks you can assemble into rich, improvised workflows.
 ---
 title: Interactivity and Immediacy
 v-stack:
