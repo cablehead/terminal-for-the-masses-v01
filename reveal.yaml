@@ -36,6 +36,35 @@ v-stack:
   - doc: |
       [Sep 9, 2025](.) &middot; New Stadium, Toronto
 ---
+title: 3 qualities for your systems
+v-stack:
+  - doc: |
+      **Interactivity**
+    frag: [ { doc: ~, math: ~ } ]
+  - doc: |
+      You can change things on the fly.
+    frag: [ { doc: ~, math: ~ } ]
+  - doc: |
+      **Immediacy**
+    frag: [ { doc: ~, math: ~ } ]
+  - doc: |
+      You feel an instant connection to what you create.
+    frag: [ { doc: ~, math: ~ } ]
+  - doc: |
+      **Interop**
+    frag: [ { doc: ~, math: ~ } ]
+  - doc: |
+      Every small tool can combine into a super-tool.
+    frag: [ { doc: ~, math: ~ } ]
+---
+title-hidden: interoperable visions
+v-stack:
+  - img:
+      src: ./interop.png
+      width: 80%
+  - doc: |
+      [@rosano](https://utopia.rosano.ca/interoperable-visions/)
+---
 title: resources
 v-stack:
   - doc: |
