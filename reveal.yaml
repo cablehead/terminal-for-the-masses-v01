@@ -36,6 +36,30 @@ v-stack:
   - doc: |
       [Sep 9, 2025](.) &middot; New Stadium, Toronto
 ---
+title-hidden: jaime lerner
+v-stack:
+  - img:
+      src: ./jaime-lerner.png
+      width: 60%
+  - doc: |
+      *"A cidade não é tão complexa quanto os vendedores de complexidade querem que a gente acredite, porque eles querem nos vender a complexidade."*
+      
+      [@jaime-lerner](https://www.youtube.com/watch?v=hRD3l3rlMpo)
+---
+title-hidden: jaime lerner translation
+v-stack:
+  - img:
+      src: ./jaime-lerner.png
+      width: 60%
+  - doc: |
+      *"A city is not as complicated as the complexity-sellers want us to believe, because they want to sell us complexity."*
+      
+      [@jaime-lerner](https://www.youtube.com/watch?v=hRD3l3rlMpo)
+---
+title-hidden: city software
+doc: |
+    *"A ~~city~~ **software system** is not as complicated as the complexity-sellers want us to believe, because they want to sell us complexity."*
+---
 title: 3 qualities for your systems
 v-stack:
   - doc: |
@@ -56,6 +80,74 @@ v-stack:
   - doc: |
       Every small tool can combine into a super-tool.
     frag: [ { doc: ~, math: ~ } ]
+---
+title: Terminal
+h-stack:
+  - doc: |
+      Originally, a physical device (keyboard + screen/teletype) for input/output. Today, it's a terminal emulator: software that provides a text-based interface to programs. It handles display, input, and emulation of standards like VT100, but it doesn't itself "understand" commands.
+  - img:
+      src: ./vt100.png
+      width: 80%
+---
+title: Shell
+img:
+  src: ./tnmt.png
+  width: 40%
+---
+title: Shell
+h-stack:
+  - v-stack:
+    - doc: |
+        A user interface that provides access to operating system services. It's the outer layer wrapping around the kernel, letting you interact with the core.
+    - doc: |
+        Like a shell around a nut: surrounds and protects the kernel, exposing only controlled ways to interact.
+      frag: [ { doc: ~, math: ~ } ]
+  - img:
+      src: ./shell.png
+      width: 100%
+---
+title: Shell
+h-stack:
+  - v-stack:
+    - doc: |
+        The shell lets you run CLI tools
+    - doc: |
+        CLI Tool (Command-Line Interface Tool)
+        
+        A small program you run from the shell. Each one does one job well, takes input, and produces output.
+      frag: [ { doc: ~, math: ~ } ]
+  - img:
+      src: ./shell.png
+      width: 100%
+---
+title: Shell
+doc: |
+    An environment for connecting and orchestrating small building blocks. It lets you interactively assemble them, see results immediately, and improvise workflows on the fly.
+---
+title-hidden: terminal history
+img:
+  src: ./terminal-history.png
+  width: 90%
+  height: 90%
+---
+title-hidden: terminal history nushell
+h-stack:
+  - img:
+      src: ./terminal-history-nushell.png
+      width: 90%
+  - img:
+      src: ./nushell.png
+      width: 60%
+---
+title: Interactivity and Immediacy
+v-stack:
+  - doc: |
+      Creators need immediate connection to what they are creating
+  - video:
+      src: ./bret-victor-inventing-on-principle-segment-direct.mp4
+      width: 80%
+  - doc: |
+      [@bret-victor](https://youtu.be/PUv66718DII?si=oSS2brVbZGkMJMiq&t=643)
 ---
 title-hidden: interoperable visions
 v-stack:
