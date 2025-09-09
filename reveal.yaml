@@ -1,0 +1,45 @@
+%YAML 1.2
+---
+description: terminal for the masses
+author: Andy Gayton
+theme: dracula
+option:
+  hash: true
+  slide number: c/t
+  pdf max pages per slide: 1
+style: |
+  .reveal .slide-number {
+      font-size: 24pt;
+      position: absolute;
+      right: 2em;
+      top: 1em;
+      color: #877b68;
+      background-color: transparent;
+  }
+  .left-align p {
+      text-align: left;
+  }
+  img {
+    border-radius: 10px;
+  }
+  .reveal pre code {
+    max-height: 80vh;
+  }
+---
+title: "Workshop: Terminal for the Masses ::\nV01"
+doc: |
+    *[@ndyg](https://ndyg.co)*
+
+    [Sep 9, 2025](.) &middot; New Stadium, Toronto
+---
+title: resources
+v-stack:
+  - doc: |
+      ## tools used
+      - [websocat](https://github.com/vi/websocat)
+      - [nushell](https://www.nushell.sh)
+      - [xs](https://github.com/cablehead/xs)
+  - doc: |
+      ## slides created with
+      - [reveal.js](https://revealjs.com)
+      - [reveal-yaml.rs](https://github.com/KmolYuan/reveal-yaml-rs)
