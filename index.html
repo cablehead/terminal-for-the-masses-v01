@@ -6,6 +6,20 @@
     <meta name="description" content="terminal for the masses">
     <meta name="author" content="Andy Gayton">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Workshop: Terminal for the Masses :: V01">
+    <meta property="og:description" content="These are the slides from the Workshop: Terminal for the Masses presented on September 9, 2025 at New Stadium, Toronto. Explores terminal literacy through interactivity, immediacy, and interoperability with live Nushell demos.">
+    <meta property="og:image" content="https://cablehead.github.io/terminal-for-the-masses-v01/screenshot.png">
+    <meta property="og:url" content="https://cablehead.github.io/terminal-for-the-masses-v01/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Terminal for the Masses">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Workshop: Terminal for the Masses :: V01">
+    <meta name="twitter:description" content="These are the slides from the Workshop: Terminal for the Masses presented on September 9, 2025 at New Stadium, Toronto. Explores terminal literacy through interactivity, immediacy, and interoperability with live Nushell demos.">
+    <meta name="twitter:image" content="https://cablehead.github.io/terminal-for-the-masses-v01/screenshot.png">
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
@@ -452,9 +466,9 @@ img {
     }
 
     Reveal.initialize({
+        hash: true,
         slideNumber: "c/t",
         pdfMaxPagesPerSlide: 1,
-        hash: true,
         plugins: [RevealNotes, RevealSearch, RevealHighlight, RevealMath.MathJax2, RevealZoom, ],
         mathjax2: {
             mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js',
