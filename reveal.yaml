@@ -168,13 +168,17 @@ v-stack:
       [@rosano](https://utopia.rosano.ca/interoperable-visions/)
 ---
 title: resources
-v-stack:
+h-stack:
   - doc: |
       ## tools used
-      - [websocat](https://github.com/vi/websocat)
-      - [nushell](https://www.nushell.sh)
-      - [xs](https://github.com/cablehead/xs)
+      - [Nushell](https://www.nushell.sh)
+      - [jq](https://jqlang.org/)
+      - [bat](https://github.com/sharkdp/bat)
+      - [ripgrep](https://github.com/BurntSushi/ripgrep)
+      - [http-nu](https://github.com/cablehead/http-nu)
+      - [cross.stream](https://www.cross.stream)
   - doc: |
-      ## slides created with
+      ## slides
+      - [code for these slides](https://github.com/cablehead/terminal-for-the-masses-v01)
       - [reveal.js](https://revealjs.com)
       - [reveal-yaml.rs](https://github.com/KmolYuan/reveal-yaml-rs)
