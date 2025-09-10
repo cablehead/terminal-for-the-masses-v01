@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Workshop: Terminal for the Masses :: V01</title>
+    <meta name="description" content="terminal for the masses">
+    <meta name="author" content="Andy Gayton">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/dracula.css" id="theme">
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" id="highlight-theme">
+    <style>
+        .chapter-header {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            font-size: 18pt;
+            opacity: 0.5;
+            display: none;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 1em;
+            left: 1em;
+            display: inline-block;
+        }
+
+        .footer > * {
+            opacity: 0.7;
+        }
+
+        .footer * {
+            vertical-align: middle;
+        }
+
+        .footer span {
+            font-size: 15pt;
+        }
+
+        .reveal figure {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            margin: 20px;
+        }
+
+        .reveal figcaption {
+            text-align: center;
+        }
+
+        .h-stack {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .h-stack-border {
+            border-left: 2px solid;
+        }
+
+        .v-stack > * {
+            display: block;
+        }
+
+        .v-stack-border {
+            border-top: 2px solid;
+        }
+
+        .reveal h1 {
+            font-size: 36pt;
+        }
+
+        .reveal h2 {
+            font-size: 30pt;
+        }
+
+        .reveal h3 {
+            font-size: 28pt;
+        }
+
+        .reveal h4 {
+            font-size: 24pt;
+        }
+
+        .reveal p, .reveal li, .reveal table, figcaption {
+            font-size: 20pt;
+        }
+
+        .reveal pre code, .reveal section img, #footer-left > a > img {
+            border: none;
+            -webkit-box-shadow: none !important;
+            -moz-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+
+        .reveal code {
+            color: white;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 5px;
+            border-color: #3F3F3F;
+            background: #3F3F3F;
+        }
+
+        .reveal pre code {
+            border-radius: 10px;
+        }
+
+        .img-pop {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .img-pop:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        #modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        #img-demo {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 100%;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 100%;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Animation */
+        #img-demo, #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        #close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        #close:hover, #close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            #img-demo {
+                width: 100%;
+            }
+        }
+
+        .reveal .slide-number {
+    font-size: 24pt;
+    position: absolute;
+    right: 2em;
+    top: 1em;
+    color: #877b68;
+    background-color: transparent;
+}
+.left-align p {
+    text-align: left;
+}
+img {
+  border-radius: 10px;
+}
+.reveal pre code {
+  max-height: 80vh;
+}
+
+    </style>
+</head>
+<body>
+<div style="display: none">
+    <div class="top-object">
+        
+    </div>
+</div>
+<div class="reveal">
+    <div class="slides">
+        <section>
+<section>
+<h1>Workshop: Terminal for the Masses :: V01</h1>
+<div class="v-stack"><div><div class="h-stack">
+<img alt="" src="./screenshot.png" width="30%"/>
+</div>
+</div>
+<div><p><em><a href="https://ndyg.co">@ndyg</a></em></p>
+</div>
+<div><p><a href=".">Sep 9, 2025</a> · New Stadium, Toronto</p>
+</div>
+</div>
+</section><section id="outline">
+<h1>Outline</h1>
+<ul>
+<li><a href="#/1">jaime lerner</a></li>
+<li><a href="#/2">jaime lerner translation</a></li>
+<li><a href="#/3">city software</a></li>
+<li><a href="#/4">3 qualities for your systems</a></li>
+<li><a href="#/5">Terminal</a></li>
+<li><a href="#/6">Shell</a></li>
+<li><a href="#/7">Shell</a></li>
+<li><a href="#/8">Shell</a></li>
+<li><a href="#/9">terminal history</a></li>
+<li><a href="#/10">terminal history nushell</a></li>
+<li><a href="#/11">Shell</a></li>
+<li><a href="#/12">shell journey</a></li>
+<li><a href="#/13">Interactivity and Immediacy</a></li>
+<li><a href="#/14">interoperable visions</a></li>
+<li><a href="#/15">resources</a></li>
+</ul>
+</section>
+</section>
+<section>
+<section>
+<div class="v-stack"><div><div class="h-stack">
+<img alt="" src="./jaime-lerner.png" width="60%"/>
+</div>
+</div>
+<div><p><em>“A cidade não é tão complexa quanto os vendedores de complexidade querem que a gente acredite, porque eles querem nos vender a complexidade.”</em></p>
+<p><a href="https://www.youtube.com/watch?v=hRD3l3rlMpo">@jaime-lerner</a></p>
+</div>
+</div>
+</section></section>
+<section>
+<section>
+<div class="v-stack"><div><div class="h-stack">
+<img alt="" src="./jaime-lerner.png" width="60%"/>
+</div>
+</div>
+<div><p><em>“A city is not as complicated as the complexity-sellers want us to believe, because they want to sell us complexity.”</em></p>
+<p><a href="https://www.youtube.com/watch?v=hRD3l3rlMpo">@jaime-lerner</a></p>
+</div>
+</div>
+</section></section>
+<section>
+<section>
+<p><em>“A <del>city</del> <strong>software system</strong> is not as complicated as the complexity-sellers want us to believe, because they want to sell us complexity.”</em></p>
+</section></section>
+<section>
+<section>
+<h1>3 qualities for your systems</h1>
+<div class="v-stack"><div><span class="fragment " data-fragment-index="0"><p><strong>Interactivity</strong></p>
+</span></div>
+<div><span class="fragment " data-fragment-index="1"><p>You can change things on the fly.</p>
+</span></div>
+<div><span class="fragment " data-fragment-index="2"><p><strong>Immediacy</strong></p>
+</span></div>
+<div><span class="fragment " data-fragment-index="3"><p>You feel an instant connection to what you create.</p>
+</span></div>
+<div><span class="fragment " data-fragment-index="4"><p><strong>Interop</strong></p>
+</span></div>
+<div><span class="fragment " data-fragment-index="5"><p>Every small tool can combine into a super-tool.</p>
+</span></div>
+</div>
+</section></section>
+<section>
+<section>
+<h1>Terminal</h1>
+<div class="h-stack"><div style="width:50.0000%"><p>Originally, a physical device (keyboard + screen/teletype) for input/output. Today, it’s a terminal emulator: software that provides a text-based interface to programs. It handles display, input, and emulation of standards like VT100, but it doesn’t itself “understand” commands.</p>
+</div>
+<div style="width:50.0000%"><div class="h-stack">
+<img alt="" src="./vt100.png" width="80%"/>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section>
+<h1>Shell</h1>
+<div class="h-stack">
+<img alt="" src="./tnmt.png" width="40%"/>
+</div>
+</section></section>
+<section>
+<section>
+<h1>Shell</h1>
+<div class="h-stack"><div style="width:50.0000%"><div class="v-stack"><div><p>A user interface that provides access to operating system services. It’s the outer layer wrapping around the kernel, letting you interact with the core.</p>
+</div>
+<div><span class="fragment " data-fragment-index="0"><p>Like a shell around a nut: surrounds and protects the kernel, exposing only controlled ways to interact.</p>
+</span></div>
+</div>
+</div>
+<div style="width:50.0000%"><div class="h-stack">
+<img alt="" src="./shell.png" width="100%"/>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section>
+<h1>Shell</h1>
+<div class="h-stack"><div style="width:50.0000%"><div class="v-stack"><div><p>The shell lets you run CLI tools</p>
+</div>
+<div><span class="fragment " data-fragment-index="0"><p>CLI Tool (Command-Line Interface Tool)</p>
+<p>A small program you run from the shell. Each one does one job well, takes input, and produces output.</p>
+</span></div>
+</div>
+</div>
+<div style="width:50.0000%"><div class="h-stack">
+<img alt="" src="./shell.png" width="100%"/>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section>
+<div class="h-stack">
+<img alt="" src="./terminal-history.png" width="90%" height="90%"/>
+</div>
+</section></section>
+<section>
+<section>
+<div class="h-stack"><div style="width:50.0000%"><div class="h-stack">
+<img alt="" src="./terminal-history-nushell.png" width="90%"/>
+</div>
+</div>
+<div style="width:50.0000%"><p><a href="https://www.nushell.sh"><img src="./nushell.png" alt="" /></a></p>
+</div>
+</div>
+</section></section>
+<section>
+<section>
+<h1>Shell</h1>
+<p>An environment for connecting and orchestrating small building blocks. It lets you interactively assemble them, see results immediately, and improvise workflows on the fly.</p>
+</section></section>
+<section>
+<section>
+<div class="v-stack"><div><p><strong>Shell (where you begin)</strong></p>
+<p>A place to type something small, poke at it, and immediately see what happens. You try, adjust, and learn through instant feedback.</p>
+</div>
+<div><p><strong>Shell (where you end up)</strong></p>
+<p>An environment for connecting and orchestrating small tools. Over time, those little pokes become building blocks you can assemble into rich, improvised workflows.</p>
+</div>
+</div>
+</section></section>
+<section>
+<section>
+<h1>Interactivity and Immediacy</h1>
+<div class="v-stack"><div><p>Creators need immediate connection to what they are creating</p>
+</div>
+<div><div class="h-stack">
+<video width="80%" controls><source src="./bret-victor-inventing-on-principle-segment-direct.mp4" type="video/mp4"></video>
+</div>
+</div>
+<div><p><a href="https://youtu.be/PUv66718DII?si=oSS2brVbZGkMJMiq&amp;t=643">@bret-victor</a></p>
+</div>
+</div>
+</section></section>
+<section>
+<section>
+<div class="v-stack"><div><div class="h-stack">
+<img alt="" src="./interop.png" width="80%"/>
+</div>
+</div>
+<div><p><a href="https://utopia.rosano.ca/interoperable-visions/">@rosano</a></p>
+</div>
+</div>
+</section></section>
+<section>
+<section>
+<h1>resources</h1>
+<div class="v-stack"><div><h2>tools used</h2>
+<ul>
+<li><a href="https://github.com/vi/websocat">websocat</a></li>
+<li><a href="https://www.nushell.sh">nushell</a></li>
+<li><a href="https://github.com/cablehead/xs">xs</a></li>
+</ul>
+</div>
+<div><h2>slides created with</h2>
+<ul>
+<li><a href="https://revealjs.com">reveal.js</a></li>
+<li><a href="https://github.com/KmolYuan/reveal-yaml-rs">reveal-yaml.rs</a></li>
+</ul>
+</div>
+</div>
+</section></section>
+
+    </div>
+</div>
+<div id="modal">
+    <span id="close">&times;</span>
+    <img src="" alt="demo image" id="img-demo">
+    <div id="caption"></div>
+</div>
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/math/math.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+
+<script>
+    function show_modal(a) {
+        $("#modal").css("display", "block");
+        $("#img-demo").attr("src", a.src);
+        $("#caption").html(a.alt);
+        Reveal.configure({keyboard: {27: close_modal}});
+    }
+
+    function close_modal() {
+        $("#modal").css("display", "none");
+        Reveal.configure({keyboard: {27: "toggleOverview"}});
+    }
+
+    Reveal.initialize({
+        slideNumber: "c/t",
+        pdfMaxPagesPerSlide: 1,
+        hash: true,
+        plugins: [RevealNotes, RevealSearch, RevealHighlight, RevealMath.MathJax2, RevealZoom, ],
+        mathjax2: {
+            mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js',
+            config: 'TeX-AMS_HTML-full',
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)', '\\[', '\\]']],
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        }
+    }).then(() => {
+        // Pinned objects
+        if (window.location.search.match(/print-pdf/gi)) {
+            $('div.slide-background').append($('.top-object'));
+            setTimeout(function () {
+                $('div.pdf-page').each((_, e) => $(e).find('.slide-background').append($(e).find('.chapter-header').show()));
+            }, 1000);
+        } else {
+            let top = $('div.reveal');
+            top.append($('.top-object'));
+            top.append($(Reveal.getCurrentSlide()).children('.chapter-header').show());
+            Reveal.on('slidechanged', e => {
+                $(e.previousSlide).append(top.children('.chapter-header').hide());
+                top.append($(e.currentSlide).children('.chapter-header').show());
+            });
+            // Close button
+            $("#close").click(close_modal);
+            
+        }
+        // Open external links in new windows or tabs
+        $('a').filter('[href^="http"], [href^="//"]')
+            .not('[href*="' + window.location.host + '"]')
+            .attr('rel', "noopener noreferrer")
+            .attr('target', '_blank');
+    });
+</script>
+</body>
+</html>
