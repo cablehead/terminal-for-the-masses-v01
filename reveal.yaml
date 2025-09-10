@@ -90,11 +90,6 @@ h-stack:
       width: 80%
 ---
 title: Shell
-img:
-  src: ./tnmt.png
-  width: 40%
----
-title: Shell
 h-stack:
   - v-stack:
     - doc: |
@@ -131,12 +126,11 @@ h-stack:
   - img:
       src: ./terminal-history-nushell.png
       width: 90%
-  - doc: |
-      [![](./nushell.png)](https://www.nushell.sh)
----
-title: Shell
-doc: |
-    An environment for connecting and orchestrating small building blocks. It lets you interactively assemble them, see results immediately, and improvise workflows on the fly.
+  - v-stack:
+    - doc: |
+        [![](./nushell.png)](https://www.nushell.sh)
+    - doc: |
+        [@Nushell](https://www.nushell.sh)
 ---
 title-hidden: shell journey
 v-stack:
@@ -161,9 +155,8 @@ v-stack:
 ---
 title-hidden: interoperable visions
 v-stack:
-  - img:
-      src: ./interop.png
-      width: 80%
+  - doc: |
+      [![](./interop.png)](https://utopia.rosano.ca/interoperable-visions/)
   - doc: |
       [@rosano](https://utopia.rosano.ca/interoperable-visions/)
 ---
