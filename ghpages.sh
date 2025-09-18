@@ -28,8 +28,5 @@ sed -i.bak '/viewport/a\
 # Remove backup file
 rm package/index.html.bak
 
-# Commit and deploy
-git add package
-git commit -m "build slides"
-git push
+# Deploy to gh-pages branch only (don't commit to main)
 git push origin "$(git subtree split --prefix package main):refs/heads/gh-pages" --force
